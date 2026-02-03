@@ -74,21 +74,21 @@ public class Libro {
     }
 
     public String obtenerTituloPrecuela() {
-        String titulo;
+        String titulo = "La precuela de "+this.titulo+" es: ";
             if (this.precuela == null) {
-                titulo = "<NINGUNA>";
+                titulo += "<NINGUNA>";
             } else {
-                titulo = this.precuela.getTitulo();
+                titulo += this.precuela.getTitulo();
             }
         return titulo;
     }
 
     public String obtenerTituloSecuela() {
-        String titulo;
+        String titulo = "La secuela de "+this.titulo+" es: ";
         if (this.secuela == null) {
-            titulo = "<NINGUNA>";
+            titulo += "<NINGUNA>";
         } else {
-            titulo = this.secuela.getTitulo();
+            titulo += this.secuela.getTitulo();
         }
         return titulo;
     }

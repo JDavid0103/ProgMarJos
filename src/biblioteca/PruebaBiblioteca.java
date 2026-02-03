@@ -3,33 +3,33 @@ package biblioteca;
 public class PruebaBiblioteca {
   public static void main(String[] args) {
     System.out.println("=== CASO 1 ===");
-//    Libro libro1 = new Libro("J. K. Rowling", "Harry Potter y la piedra filosofal");
-//    System.out.println(libro1.obtenerInformacion());
-//
-//    System.out.println("=== CASO 2 ===");
-//    libro1.registrarVenta(10000);
-//    System.out.println(libro1.obtenerInformacion());
-//
-//    System.out.println("=== CASO 3 ===");
-//    Libro libro2 = new Libro("J. K. Rowling", "Harry Potter y la cámara secreta");
-//    libro2.registrarVenta(20000);
-//    System.out.println(libro2.obtenerInformacion());
-//
-//    System.out.println("=== CASO 4 ===");
-//    System.out.println(libro1.obtenerTituloPrecuela());
-//    System.out.println(libro1.obtenerTituloSecuela());
-//    System.out.println(libro2.obtenerTituloPrecuela());
-//    System.out.println(libro2.obtenerTituloSecuela());
-//    libro1.mostrarResumenSaga();
-//
-//    System.out.println("=== CASO 5 ===");
-//    libro1.anadirSecuela(libro2);
-//
-//    System.out.println(libro1.obtenerTituloPrecuela());
-//    System.out.println(libro1.obtenerTituloSecuela());
-//    System.out.println(libro2.obtenerTituloPrecuela());
-//    System.out.println(libro2.obtenerTituloSecuela());
-//
+    Libro libro1 = new Libro("J. K. Rowling", "Harry Potter y la piedra filosofal");
+    System.out.println(libro1.obtenerInformacion());
+
+    System.out.println("=== CASO 2 ===");
+    libro1.registrarVenta(10000);
+    System.out.println(libro1.obtenerInformacion());
+
+    System.out.println("=== CASO 3 ===");
+    Libro libro2 = new Libro("J. K. Rowling", "Harry Potter y la cámara secreta");
+    libro2.registrarVenta(20000);
+    System.out.println(libro2.obtenerInformacion());
+
+    System.out.println("=== CASO 4 ===");
+    System.out.println(libro1.obtenerTituloPrecuela());
+    System.out.println(libro1.obtenerTituloSecuela());
+    System.out.println(libro2.obtenerTituloPrecuela());
+    System.out.println(libro2.obtenerTituloSecuela());
+    libro1.mostrarResumenSaga();
+
+    System.out.println("=== CASO 5 ===");
+    libro1.anadirSecuela(libro2);
+
+    System.out.println(libro1.obtenerTituloPrecuela());
+    System.out.println(libro1.obtenerTituloSecuela());
+    System.out.println(libro2.obtenerTituloPrecuela());
+    System.out.println(libro2.obtenerTituloSecuela());
+
 //    System.out.println("=== CASO 6 ===");
 //    libro1.mostrarResumenSaga();
 //
