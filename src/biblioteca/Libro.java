@@ -15,7 +15,6 @@ public class Libro {
     }
 
 //    Setters y Getters.
-
     private void setAutor(String autor) {
         if (autor == null) {
             this.autor = "";
@@ -51,7 +50,7 @@ public class Libro {
         }
     }
 
-    public String obtenerTituloPrecuela () {
+    public String obtenerTituloPrecuela() {
         String titulo;
             if (this.precuela == null) {
                 titulo = "<NINGUNA>";
@@ -61,7 +60,7 @@ public class Libro {
         return titulo;
     }
 
-    public String obtenerTituloSecuela () {
+    public String obtenerTituloSecuela() {
         String titulo;
         if (this.secuela == null) {
             titulo = "<NINGUNA>";
@@ -71,16 +70,18 @@ public class Libro {
         return titulo;
     }
 
-    public void mostrarResumenSaga () {
+    public void mostrarResumenSaga() {
 
     }
 
-    public void anadirSecuela (Libro secuela) {
-
+    public void anadirSecuela(Libro secuela) {
+        this.secuela = secuela;
+        secuela.anadirPrecuela(this);
     }
 
-    public void anadirPrecuela (Libro precuela) {
-
+    public void anadirPrecuela(Libro precuela) {
+        this.precuela = precuela;
+        precuela.anadirSecuela(this);
     }
 
     public Libro[] obtenerSaga() {
@@ -88,7 +89,4 @@ public class Libro {
 
         return saga;
     }
-
-
-
 }
