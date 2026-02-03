@@ -61,7 +61,7 @@ public class Libro {
 
     public String obtenerInformacion() {
         String info;
-
+        info = "El libro "+this.titulo+" es de "+this.autor+" y ha vendido un total de: "+this.ejemplaresVendidos+" ejemplares";
         return info;
     }
 
@@ -94,7 +94,15 @@ public class Libro {
     }
 
     public void mostrarResumenSaga() {
-
+        int numLibro = 0, totalVentas = 0;
+        Libro[] saga = this.obtenerSaga();
+        for (int i = 0; i < saga.length; i++) {
+            if (saga[i] == this) {
+                numLibro = i+1;
+            }
+            totalVentas += saga[i].getEjemplaresVendidos();
+        }
+        System.out.println("El libro "+this.titulo+"es el libro número "+numLibro+" de una saga que tiene un total de "+saga.length+" libros. Entre todos ellos han vendido un total de "+totalVentas+" ejemplares.");
     }
 
     public void anadirSecuela(Libro secuela) {
