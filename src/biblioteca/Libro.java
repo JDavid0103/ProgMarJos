@@ -32,7 +32,11 @@ public class Libro {
         }
     }
 
-//    Métodos
+    public String getTitulo() {
+        return titulo;
+    }
+
+    //    Métodos
     public String obtenerInformacion() {
         String info;
 
@@ -49,13 +53,21 @@ public class Libro {
 
     public String obtenerTituloPrecuela () {
         String titulo;
-
+            if (this.precuela == null) {
+                titulo = "<NINGUNA>";
+            } else {
+                titulo = this.precuela.getTitulo();
+            }
         return titulo;
     }
 
     public String obtenerTituloSecuela () {
         String titulo;
-
+        if (this.secuela == null) {
+            titulo = "<NINGUNA>";
+        } else {
+            titulo = this.secuela.getTitulo();
+        }
         return titulo;
     }
 
