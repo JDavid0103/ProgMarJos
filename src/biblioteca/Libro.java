@@ -35,7 +35,28 @@ public class Libro {
         return titulo;
     }
 
+    public int getEjemplaresVendidos() {
+        return ejemplaresVendidos;
+    }
+
     //    Métodos
+
+//    Este metodo se encarga de mirar cuántos libros hay dentro de la saga.
+    private int numLibrosSaga() {
+        int numLibros = 1;
+        Libro precuelaActual = this.precuela;
+        Libro secuelaActual = this.secuela;
+        while (precuelaActual != null) {
+            numLibros++;
+            precuelaActual = precuelaActual.precuela;
+        }
+        while (secuelaActual != null) {
+            numLibros++;
+            secuelaActual = secuelaActual.secuela;
+        }
+        return numLibros;
+    }
+
     public String obtenerInformacion() {
         String info;
 
