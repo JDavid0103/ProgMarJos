@@ -102,17 +102,17 @@ public class Libro {
             }
             totalVentas += saga[i].getEjemplaresVendidos();
         }
-        System.out.println("El libro "+this.titulo+"es el libro número "+numLibro+" de una saga que tiene un total de "+saga.length+" libros. Entre todos ellos han vendido un total de "+totalVentas+" ejemplares.");
+        System.out.println("El libro "+this.titulo+" es el libro número "+numLibro+" de una saga que tiene un total de "+saga.length+" libros. Entre todos ellos han vendido un total de "+totalVentas+" ejemplares.");
     }
 
     public void anadirSecuela(Libro secuela) {
         this.secuela = secuela;
-        secuela.anadirPrecuela(this);
+        secuela.precuela = this;
     }
 
     public void anadirPrecuela(Libro precuela) {
         this.precuela = precuela;
-        precuela.anadirSecuela(this);
+        precuela.secuela = this;
     }
 
     public Libro[] obtenerSaga() {
