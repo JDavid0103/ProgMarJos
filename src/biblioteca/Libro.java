@@ -1,5 +1,7 @@
 package biblioteca;
 
+import java.util.Arrays;
+
 public class Libro {
 //    Atributos de la clase libro.
     private String autor;
@@ -106,7 +108,17 @@ public class Libro {
     }
 
     public Libro[] obtenerSaga() {
-        Libro[] saga = new Libro[1];
+        Libro[] saga = new Libro[this.numLibrosSaga()];
+        Libro primerLibroSaga = this;
+
+        while (primerLibroSaga.precuela != null) {
+            primerLibroSaga = primerLibroSaga.precuela;
+        }
+
+        for (int i = 0; i < saga.length; i++) {
+            saga[i] = primerLibroSaga;
+            primerLibroSaga = primerLibroSaga.secuela;
+        }
 
         return saga;
     }
