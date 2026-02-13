@@ -130,4 +130,40 @@ public class Libro {
 
         return saga;
     }
+
+    public void anadirSiguienteEnSaga(Libro nuevo) {
+        if (nuevo != null) {
+            if (this.secuela != null) {
+                this.secuela.anadirPrecuela(nuevo);
+            }
+            this.anadirSecuela(nuevo);
+        } else {
+            System.out.println("\n- El nuevo libro a añadir no puede ser null.");
+        }
+    }
+
+    public Libro[] mostrarLibrosSiguientes() {
+        Libro[] res = null;
+
+        if (this.secuela != null) {
+            Libro libroActual = this;
+
+            //  Cuento el número de libros totales.
+            int libros = 0;
+            while (libroActual.secuela != null) {
+                libros++;
+                libroActual = libroActual.secuela;
+            }
+
+            //  Relleno el array de libros con los libros correspondientes.
+            libroActual = this;
+            res = new Libro[libros];
+            for (int i = 0; i < res.length; i++) {
+                res[i] = libroActual.secuela;
+                libroActual = libroActual.secuela;
+            }
+        }
+
+        return res;
+    }
 }
